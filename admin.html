@@ -601,20 +601,21 @@ async function ghGet(path) {
   let lastErr = '';
   for (const repo of candidateRepos()) {
     let res = await ghGetFromRepo(repo, path, true);
-    if (res.errMsg) lastErr = `[${res.status}] ${res.errMsg}`;
-    if (!res.ok && (res.status === 403 || res.status === 404 || res.status === 0)) {
-      // Repositórios públicos podem ser lidos sem token
+    if (!res.ok && res.errMsg) lastErr = `[${res.status}] ${res.errMsg}`;
+    // Para repos públicos, tenta sem token em caso de qualquer erro de auth/rede
+    if (!res.ok) {
       const publicRes = await ghGetFromRepo(repo, path, false);
       if (publicRes.ok) res = publicRes;
       else if (publicRes.errMsg) lastErr = `[${publicRes.status}] ${publicRes.errMsg}`;
     }
     if (res.ok && res.data) {
       setActiveRepo(res.repo);
+      window._ghLastError = '';
       return res.data;
     }
   }
   // Armazena último erro para diagnóstico
-  window._ghLastError = lastErr;
+  window._ghLastError = lastErr || 'Sem resposta da API';
   return null;
 }
 
@@ -855,6 +856,11 @@ async function publicarImagem() {
 
   const btn = document.getElementById('btn-confirmar');
   const st  = document.getElementById('modal-status');
+
+  // Sempre recarregar CFG do localStorage para garantir token mais recente
+  const cfgFresh2 = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
+  if (cfgFresh2.token) Object.assign(CFG, cfgFresh2);
+
   btn.disabled = true;
   btn.innerHTML = '<span class="spin"></span>Publicando...';
   st.textContent = 'Enviando para o GitHub...';
@@ -967,6 +973,12 @@ async function publicarTexto(key, label) {
 
   const htmlFile = HTML_MAP[key];
   if (!htmlFile) { st.textContent='✗ Arquivo não mapeado'; st.className='field-status err'; return; }
+
+  // Sempre recarregar CFG do localStorage para garantir token mais recente
+  const cfgFresh = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
+  if (cfgFresh.token) Object.assign(CFG, cfgFresh);
+
+  if (!CFG.token) { showToast('Configure o GitHub primeiro!','err'); return; }
 
   st.textContent = '⏳ Publicando...'; st.className = 'field-status loading';
   setStatus(`Publicando "${label}"...`);
@@ -1144,6 +1156,9 @@ document.getElementById('modal').addEventListener('click', e => {
 // ══════════════════════════════════════════════
 async function testarConexao() {
   const btn = document.getElementById('btn-test-conn');
+  // Recarregar CFG do localStorage para garantir token mais recente
+  const cfgFresh3 = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
+  if (cfgFresh3.token) Object.assign(CFG, cfgFresh3);
   if (!CFG.token) { showToast('Configure o token GitHub primeiro (⚙️ Configurações)','err'); return; }
   btn.disabled = true;
   btn.textContent = '⏳ Testando...';
