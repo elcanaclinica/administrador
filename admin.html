@@ -14,131 +14,84 @@
   --hover:#2a3d48;--texto:#3a3a3a;
 }
 body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
-
-/* ── LOGIN ── */
 #login{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--azul)}
 .lbox{background:#fff;padding:55px 45px;width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-.lbox img{height:55px;width:auto;margin-bottom:8px}
 .llogo{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--azul);letter-spacing:3px}
 .lsub{font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--dourado);display:block;margin-bottom:36px}
-.lbox input{width:100%;padding:13px 16px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.9rem;margin-bottom:12px;outline:none;transition:.3s;border-radius:2px}
+.lbox input{width:100%;padding:13px 16px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.9rem;margin-bottom:12px;outline:none;border-radius:2px}
 .lbox input:focus{border-color:var(--dourado)}
-.lbtn{width:100%;padding:14px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.3s;border-radius:2px}
+.lbtn{width:100%;padding:14px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px}
 .lbtn:hover{background:var(--dourado)}
 .lerr{color:var(--verm);font-size:.85rem;margin-top:10px;display:none}
-
-/* ── PAINEL ── */
 #painel{display:none;min-height:100vh;flex-direction:column}
-
-/* Topbar */
 .topbar{background:var(--azul);color:#fff;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:100;flex-shrink:0}
-.tlogo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;letter-spacing:2px;display:flex;align-items:center;gap:10px}
-.tlogo img{height:26px;filter:brightness(10)}
+.tlogo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;letter-spacing:2px}
 .tacts{display:flex;gap:10px;align-items:center}
-.tbtn{padding:7px 16px;border:1px solid rgba(255,255,255,.3);color:#fff;background:none;font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:.3s;border-radius:2px}
+.tbtn{padding:7px 16px;border:1px solid rgba(255,255,255,.3);color:#fff;background:none;font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;border-radius:2px}
 .tbtn:hover{background:rgba(255,255,255,.1)}
 .tbtn.gold{background:var(--dourado);border-color:var(--dourado)}
-.tbtn.gold:hover{background:#b8935a}
 .gh-badge{font-size:.75rem;color:var(--dourado);margin-left:8px}
-
-/* Layout */
 .layout{display:flex;flex:1;min-height:0}
-
-/* Sidebar */
 .sidebar{width:210px;background:#fff;border-right:1px solid var(--bege2);padding:16px 0;flex-shrink:0;overflow-y:auto}
 .sb-sec{padding:8px 18px;font-size:.58rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--dourado);margin-top:10px}
-.sb-item{display:flex;align-items:center;gap:10px;padding:11px 18px;cursor:pointer;font-size:.88rem;color:#555;transition:.2s;border-left:3px solid transparent}
+.sb-item{display:flex;align-items:center;gap:10px;padding:11px 18px;cursor:pointer;font-size:.88rem;color:#555;border-left:3px solid transparent}
 .sb-item:hover{background:var(--bege);color:var(--azul)}
 .sb-item.on{background:var(--bege);color:var(--azul);border-left-color:var(--dourado);font-weight:500}
 .sb-ver{font-size:.72rem;color:#aaa;padding:16px 18px;margin-top:auto}
-
-/* Main */
 .main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
 .page{display:none;flex:1}
 .page.on{display:flex;flex-direction:column}
-
-/* Page header */
 .phdr{background:#fff;border-bottom:1px solid var(--bege2);padding:16px 24px;display:flex;align-items:center;gap:16px;flex-shrink:0}
 .phdr-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--azul);font-weight:400}
 .phdr-desc{font-size:.82rem;color:#888}
-
-/* Cards */
 .card{background:#fff;border:1px solid var(--bege2);padding:22px;margin-bottom:16px;border-radius:2px}
 .ctitle{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--dourado);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--cinza);display:block}
-
-/* Tabs */
 .tabs{display:flex;border-bottom:1px solid var(--bege2);background:#fff;flex-shrink:0;overflow-x:auto}
-.tab{padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;cursor:pointer;transition:.2s;white-space:nowrap}
+.tab{padding:12px 20px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:'Jost',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;cursor:pointer;white-space:nowrap}
 .tab.on,.tab:hover{color:var(--azul);border-bottom-color:var(--azul)}
 .tab-panel{display:none}
 .tab-panel.on{display:block}
-
-/* Scroll area */
 .scroll-area{flex:1;overflow-y:auto;padding:20px 24px}
-
-/* Image grid */
 .img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
 .icard{border:1px solid var(--bege2);background:#faf9f7;border-radius:2px;overflow:hidden}
 .icard-img{width:100%;height:140px;object-fit:cover;display:block;background:var(--bege)}
 .icard-img-placeholder{width:100%;height:140px;background:var(--bege);display:flex;align-items:center;justify-content:center;color:#bbb;font-size:.8rem}
 .icard-body{padding:10px}
 .icard-label{font-size:.65rem;letter-spacing:1px;text-transform:uppercase;color:var(--dourado);margin-bottom:3px;display:block}
-.icard-name{font-size:.75rem;color:#888;font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
-.ibtn{width:100%;padding:8px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.2s;border-radius:2px}
+.icard-name{font-size:.72rem;color:#888;font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
+.ibtn{width:100%;padding:8px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border-radius:2px}
 .ibtn:hover{background:var(--dourado)}
-.icard.uploading .ibtn{background:#888;cursor:wait}
-.icard-status{font-size:.7rem;text-align:center;padding:4px;min-height:20px}
-
-/* Text fields */
-.field{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--cinza)}
+.field{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--cinza)}
 .field:last-child{border-bottom:none}
-.field-label{display:block;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);margin-bottom:6px;font-weight:500}
+.field-label{display:block;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul);margin-bottom:6px;font-weight:500}
 .field-desc{font-size:.75rem;color:#aaa;margin-bottom:8px}
-.field input,.field textarea{width:100%;padding:11px 14px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.9rem;color:var(--texto);outline:none;transition:.3s;background:#faf9f7;border-radius:2px;resize:vertical}
+.field-sub{font-size:.7rem;color:#888;letter-spacing:1px;text-transform:uppercase;margin:8px 0 4px}
+.field input,.field textarea{width:100%;padding:11px 14px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.9rem;color:var(--texto);outline:none;background:#faf9f7;border-radius:2px;resize:vertical}
 .field input:focus,.field textarea:focus{border-color:var(--dourado)}
-.field textarea{min-height:80px}
-.field-actions{display:flex;align-items:center;gap:12px;margin-top:8px}
-.field-status{font-size:.75rem;flex:1}
+.field textarea{min-height:70px}
+.field-actions{display:flex;align-items:center;gap:12px;margin-top:10px}
+.field-status{font-size:.78rem;flex:1}
 .field-status.ok{color:var(--verde)}
 .field-status.err{color:var(--verm)}
 .field-status.loading{color:#888}
-
-/* Buttons */
-.btn{padding:10px 22px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.76rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:.3s;border-radius:2px}
+.btn{padding:10px 22px;background:var(--azul);color:#fff;border:none;font-family:'Jost',sans-serif;font-size:.76rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:2px}
 .btn:hover{background:var(--dourado)}
 .btn:disabled{background:#bbb;cursor:not-allowed}
 .btn.outline{background:none;color:var(--azul);border:1px solid var(--azul)}
-.btn.outline:hover{background:var(--azul);color:#fff}
-
-/* Config */
 .cfg-field{display:flex;align-items:center;margin-bottom:12px;gap:12px}
 .cfg-field label{font-size:.8rem;font-weight:500;color:var(--azul);width:200px;flex-shrink:0}
-.cfg-field input{flex:1;padding:10px 14px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.88rem;outline:none;transition:.3s;background:#faf9f7;border-radius:2px}
-.cfg-field input:focus{border-color:var(--dourado)}
+.cfg-field input{flex:1;padding:10px 14px;border:1px solid #ddd;font-family:'Jost',sans-serif;font-size:.88rem;outline:none;background:#faf9f7;border-radius:2px}
 .gh-status{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding:12px;background:var(--cinza);border-radius:2px}
 .gh-dot{width:10px;height:10px;border-radius:50%;background:#bbb;flex-shrink:0}
 .gh-dot.ok{background:var(--verde)}
 .gh-dot.err{background:var(--verm)}
 .tip-box{background:#fff8e8;border-left:3px solid var(--dourado);padding:14px 16px;margin:14px 0;border-radius:0 2px 2px 0;font-size:.82rem;color:#666;line-height:1.7}
-
-/* Toast */
-.toast{position:fixed;bottom:24px;right:24px;padding:14px 22px;border-radius:4px;font-size:.85rem;color:#fff;z-index:9999;display:none;animation:slideUp .3s ease;max-width:360px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
-.toast.ok{background:var(--verde)}
-.toast.err{background:var(--verm)}
-.toast.info{background:var(--azul)}
-@keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
-
-/* Status bar */
+.toast{position:fixed;bottom:24px;right:24px;padding:14px 22px;border-radius:4px;font-size:.85rem;color:#fff;z-index:9999;display:none;max-width:360px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.toast.ok{background:var(--verde)}.toast.err{background:var(--verm)}.toast.info{background:var(--azul)}
 .statusbar{background:var(--azul2);color:rgba(255,255,255,.6);font-size:.75rem;padding:5px 16px;flex-shrink:0}
-
-/* Upload overlay */
-.upload-drop{border:2px dashed #ddd;padding:24px;text-align:center;cursor:pointer;transition:.3s;background:#faf9f7;border-radius:2px;margin-bottom:12px}
+.upload-drop{border:2px dashed #ddd;padding:24px;text-align:center;cursor:pointer;background:#faf9f7;border-radius:2px;margin-bottom:12px}
 .upload-drop:hover,.upload-drop.drag{border-color:var(--dourado);background:var(--bege)}
-.upload-drop p{font-size:.85rem;color:#888}
-.upload-drop small{font-size:.75rem;color:#bbb}
 .preview-img{width:100%;max-height:200px;object-fit:cover;display:none;margin-top:10px;border:2px solid var(--dourado);border-radius:2px}
-
-/* Modal */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:8000;align-items:center;justify-content:center}
 .modal-bg.on{display:flex}
 .modal{background:#fff;padding:32px;width:520px;max-width:92vw;max-height:88vh;overflow-y:auto;border-radius:4px}
@@ -147,8 +100,6 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
 .modal-actions{display:flex;gap:10px;margin-top:20px}
 .spin{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* Instruções */
 .instr-card{background:#fff;border:1px solid var(--bege2);border-radius:2px;margin-bottom:14px;overflow:hidden}
 .instr-head{padding:16px 20px;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--azul);border-bottom:1px solid var(--bege2);background:var(--bege)}
 .instr-body{padding:16px 20px}
@@ -156,13 +107,11 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
 .instr-item strong{display:block;font-size:.82rem;color:var(--azul);margin-bottom:3px}
 .instr-item p{font-size:.82rem;color:#666;line-height:1.6;white-space:pre-line}
 </style>
-<script type='text/javascript' nonce='i/pjSZcPX4d0WuMDCqYSFw==' src='https://id-preview--3d11b54b-6024-437b-838a-5bcd98722e7d.lovable.app/AAvSILHjNhCswT90OwtjeiIqAChZH96oGEp1GXZt3DyasY1rhzIPOjeNKhATjfDqhxWRTGW-GsOanyEod9coPTc5C2cLHDB72ZspYDPbAiF9WEouKVzwpaSq1HKgu1M8X44wKt-IpD9DKX_dJqdMMUIP7_rn9N0iNDqjs6IPk4xE4BZi2PO6jGkD87AvaF6XAte-wtwKOlxruRfH_GiFfI4jAEkdJQWpUSFOjbCXH4tkLOhG_P5_ybBkK72AHslLrLSECLOc1UFMiTKSp3pOq7atUHru_jHeYn4HfXPaQ_2Atev57fJu3iV_yDr6JlYVzlTea2fgcQFuxiP5MGT8H7u7YUKStF5MdoN0e_BQAEXA7XBcCvDTUbo6A-H5cMkkblocwh6oBl3hoZfBDS8rW8y8yo422dJQqJqLyGgDqSdib5kV_tlZrWCO6FWiA3ecL7h2_B97FrQm2rCU2c1toQp1hvfOwMbp4qBkjKn4ErLA3GEClKcOKYAD8n0uxM36IbKFAIPs0T-r1Qu46rrWTZEN2r0yGOxoRnckjtOC13exD6Pk0wpWw3IeSZkBA9-chahAzCuL2_1qmoUOF164rMyB-97ANqziA41UfuNzkM5qM6NHyBppY41TazzwEx8C1-GJqy8VtsLDtT2rG6GWgUD24nF-Bwc2cMWEGfjcqM-1Zm-VirNtqNpP8L9WsH5mLJ-vDoCyEtj7YDzqgs7CZs3khaQqGUcFGPj76jxcCUYLQP4IYvBDdKOCxTKlpXtrl-diDJMLRAEMagoo6sAEWxCIk9sZUxrvIjyjkikRvF_6XmwZfQtYpEnxiFzxL1RVKdcz3QzHT4bPV3uH3AW9RecfY34IsBYADgyZ0fTs3pLTj_ntS8ZQ4ARf9d16xME_dCV7StV_LVKOah4mlU_GOoTJH6Z9_zMwh4cRCav98Z6XB7jxu7aTkePCy5JgKEctUCetM0D0EPBRWZNjneuViByXJoPpSO-v6-KP9PhFyosIp3I2s7wQYtmpobc_5BbmMRE1K83VieyHkMt6IPe64VXJ0sT2U6lysO7JjuO6FMi0Ge91VeMHDu83tQmsw1a-zYW6X1ZSgzmcB5YErMT4JSpGTMidq2YPCytTJ4hzEY0rHgo0wvDt-mx30ce7XiCW4RzrfFTHBo5hyoVVQzVZbUtqfdmK81RDzZtP4M49bC04woAL2cpwZuQD4rlFeqAmEahlaqkynzOqZ8uArmtJDRvyzvM3CQ4Ir94Flk2cr1l4bRIqWOvPG4bls0sV8Fs0HG991WFvsOWTsIvzgaG1Of-irivoHwrRNXvUyrTEFOiMQhu8sQFilPkSjL2rsUHmCRis18DIPzWdJCye2i5d7AF8F7IgmoEWex31MSUIokOrOEJqSS6gHXx2pVSmwnlPFCN4pHtzoTErJdET0RsNIjqyEtNuxOWPMXhsala5GJXYoJYBJZ43ENsNqViecqrfrg_dx-uDHbtLb62bY0L7dPcc95-7ywWNajnlZ3dz8iHvUSA5PMOaIPtdhyJvHAyqJBJYtkK6pes6EAWyAOYQBPHgF4oGq8q1yOiqnfkUyg5Cz2nmAiF6BHqzD-3m18SyMN_VwSZ1y2O2USV5uq3TO40bbE5Wq1h1IN7J_BMI8_P88RtSrmG3Smd5Sql9HKwF72HDEuh5L26Hz-FQMCpxWg8DAy4CCsDjsbQJr26kZ4x5KSAxnzKRGUDs7_X1_XT3rT4N4Vi9NuQ74FtH7N7_oymQq1owtf38IY3tikNbkztpLL8gAACgT4zwPiSkXogFqkBQWDKB_ZRy8cTiEGb5ePKUmlJU5FnKA7xIfqISs8VWYox4Yz_jNNgubCsx43AQJTWy1Ziqjd3QOB-wYhC6MhbNZUBUR5I160Eitl9cpvq3ObyUfjlwspWb2mENQ_KXYmjdm2ko8iPjKIbDF47s-DnfIFw0iIGUHQCAG6wM5TWaDhmSfDD6L4DmV55MbbHz07O1Y8MCvuCZPtbj'></script></head>
+<script type='text/javascript' nonce='rlJGJhLWk2tiICMO1yEf4Q==' src='https://id-preview--92be705d-cfde-4006-ba7e-ffc00eb3397b.lovable.app/GSwXAngziBL61ajEhW2acr9eGvKSMvF_UXWUv6y085ysQ27wnMF26qBT8r20vOMH3lmFF7TjkPeGIv9TDok4QtMnRPESuPjCkb7W2TYliSKtgQ5LY4jVZ-CQ6_i__ZPbJK_oXU8zBSoWEdPzJ5-w98fO45cUDSVW6tv53Vpwf_pj-QoFUV_4MGoqfilisc6m7y4xXfvEJaG7JsqJItJPp5AYECfgnePFZBY3y9c11gB6_HgofzSXYnxo2nLhBnJBO6_t6WQgS7RiljP1vrSLI4kZya3uxRpZ6QaWIC6sK_F3ehZ3xYzy3wGHgF0F3NLSkNCduJq1P3GJEad5UCcSEMHR0m1yvpijBJBcJgD_rO45VmnJKvv-9nu6fUOdRF46nykWc6zSw4CrPdMvYkSydml_O_FDzb6mF1FWYzKL72BrWS40FnCS5MSYQ4PLKfrArZOIKi-3lCLYDLWWjYDZbXkllDI8uCWBtZUahi74M1QLrSTG6PapbB6QsRAezi7DOgS_SGNIDCTp4I7cbQSEJixauh9fy5A4Np86NcvLDgcouNX9CfFEWf5vMm0jsbgCVduBNQe5gxSUWLtgIQ22vQ3FH5TqGwhkAjC4deC7G6nTgie697sCdJ6nZwKLBR6kgzaIYU9V9uzZYxuWDMB6BtFetF9c4wcsbvJudB_YhSsssqLwTi7sbQDF6vmcS2ocRTS2wuu9GR4SXC2XwBslUtPHbrCrMLkOkwg4hqtuS7l-eLCoDwLHXz4DuPfXrbGfo3_KIXIvTRHveMmLi4KlQaCwcvnLar9m9FWJp0HS1fsHJk0cDtGRzR3GGuV5ldLhY_QLdA52vkeUEipsmRchbYBibegHCQo8fE22qWLLdNnWBawN9m71nB3ofQgyD9LhBBKyQ3vJAIoIJ2K0JeeWKMNGGAuLgG6FdpGgFAWoM4YtkuQulE_ons5AjorKRUJid7Cw0Yy8XyimAdeoaszdPFSvBx2N2p97GErRK0Y8_FcqPSQYGzuXmXgE7DOGU1cvYCI_WybOZNAc1ebuAexdXTEuNyPx2xKGjw9m4bq9KWGmmx4fYck_3LPpv04pFTGb2nO_HT-Bf9Xah2b8wRlLqd_hUlOqaSvNe3HsnrtW2RJLZfC_zRVfA66_IWzKk2NM9uU1SeTAHFZUbrl1kT4glm0Mzw4z05N4zm-eEDrrSr1ZhKzExxj6l_AE9k6zE8IhwIoL8JQQNfKBhx36CEKbS02MKHgPckq8JTF8FUAfvGy9P3AGhrk8VS39_Fjr3S_Yu8qJb5PGS5mkw_dmiEyl58HpIoCz80jdcM6QXXcw4FJ3OBrIB8Aa7EjDBuPqX4id2rPAkTF7djd3jrxR4s9tGQdngpg2loUL8QF6FcAXLKufhIYEHlDfLpTEkagyjesea7KSGSSjpAf7n3HpjP8MGSvCcesXH2bF_z9Sksop69vJkdWXT06QUOLvXoSYo5vwH-B6KV1rmf4pLWoNj96gg46WNLvvOBXbeNErMYZ9I6bVUbJEQRYZsSyYzrhSwUK9kvhu0d5fadbceLAAntYYSTPF_afFlSpITq65854ZDOisaBHNPTq7_b1x55iCRe7xXX0GY54UeTk7JgWYwl9T76ZB5vu50SoUuKufKD8cByJg_FXTfcXM7opRLPQvSYyEVnc34AZg_iUxgsAw8H6nmYO1mcew5NFu3YJ6rB31Rd1eFTO8U6f8DkeF8KDTplkdPaS5xkkm0yfFPdDGZdSgorPSvXwWkt1ITCwIM-oDi5sPdIlY-PedJ-aV8hLryl85Q4fbQfDa4TPhz-DCKiy-ayj1yMnItR6d6sxLt1fr2jy5rt8XdkdP4C5otHQryyOxRYrnZVE_7LJXO9o19fMbP1uLYtCO9PkRiMntLviCK41-4hZ51GZRCG-WVgxhaP8BG64c6yEi9p3daYWYO_1PKA4_8iXxaJ6H_F9MYzAJRSsEnzcXHo7QhAl1po3TMwSIf74jDB-xpmPWUHY8'></script></head>
 <body>
 
-<!-- LOGIN -->
 <div id="login">
   <div class="lbox">
-    <img src="imagens/Elcana_d9dae7.png" alt="Elcana" onerror="this.style.display=&#39;none&#39;">
     <div class="llogo">ELCANA</div>
     <span class="lsub">Área Administrativa</span>
     <input type="text" id="lu" placeholder="Usuário" autocomplete="username">
@@ -172,13 +121,9 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
   </div>
 </div>
 
-<!-- PAINEL -->
 <div id="painel">
   <div class="topbar">
-    <div class="tlogo">
-      <img src="imagens/Elcana_d9dae7.png" alt="Elcana" onerror="this.style.display=&#39;none&#39;">
-      Editor do Site
-    </div>
+    <div class="tlogo">Editor do Site</div>
     <div class="tacts">
       <span class="gh-badge" id="gh-badge">○ não configurado</span>
       <a id="btn-ver-site" href="#" target="_blank" class="tbtn gold">🌐 Ver Site</a>
@@ -187,79 +132,65 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
   </div>
 
   <div class="layout">
-    <!-- Sidebar -->
     <div class="sidebar">
       <div class="sb-sec">Conteúdo</div>
-      <div class="sb-item on" onclick="showPage(&#39;imagens&#39;,this)">🖼️ &nbsp;Imagens</div>
-      <div class="sb-item" onclick="showPage(&#39;textos&#39;,this)">✏️ &nbsp;Textos</div>
+      <div class="sb-item" onclick="showPage(&#39;imagens&#39;,this)">🖼️ &nbsp;Imagens</div>
+      <div class="sb-item on" onclick="showPage(&#39;textos&#39;,this)">✏️ &nbsp;Textos</div>
       <div class="sb-sec">Config</div>
       <div class="sb-item" onclick="showPage(&#39;config&#39;,this)">⚙️ &nbsp;Configurações</div>
       <div class="sb-item" onclick="showPage(&#39;instrucoes&#39;,this)">📖 &nbsp;Instruções</div>
-      <div class="sb-ver">v3.0 — Clínica Elcana</div>
+      <div class="sb-ver">v4.0 — Clínica Elcana</div>
     </div>
 
-    <!-- Main -->
     <div class="main">
 
-      <!-- IMAGENS -->
-      <div id="page-imagens" class="page on">
+      <div id="page-imagens" class="page">
         <div class="phdr">
           <span class="phdr-title">Gerenciar Imagens</span>
           <span class="phdr-desc">Clique em "Trocar" para substituir qualquer foto do site.</span>
         </div>
         <div class="tabs" id="img-tabs">
           <button class="tab on" onclick="showTab(&#39;img&#39;,&#39;home&#39;,this)">🏠 Home</button>
-          <button class="tab" onclick="showTab(&#39;img&#39;,&#39;tratamentos&#39;,this)">💆 Tratamentos</button>
-          <button class="tab" onclick="showTab(&#39;img&#39;,&#39;tecnologias&#39;,this)">⚙️ Tecnologias</button>
+          <button class="tab" onclick="showTab(&#39;img&#39;,&#39;trat&#39;,this)">💆 Tratamentos</button>
           <button class="tab" onclick="showTab(&#39;img&#39;,&#39;geral&#39;,this)">🎨 Logo & Geral</button>
         </div>
         <div class="scroll-area">
           <div id="img-home" class="tab-panel on"><div class="img-grid" id="grid-home"></div></div>
-          <div id="img-tratamentos" class="tab-panel"><div class="img-grid" id="grid-trat"></div></div>
-          <div id="img-tecnologias" class="tab-panel"><div class="img-grid" id="grid-tec"></div></div>
+          <div id="img-trat" class="tab-panel"><div class="img-grid" id="grid-trat"></div></div>
           <div id="img-geral" class="tab-panel"><div class="img-grid" id="grid-geral"></div></div>
         </div>
       </div>
 
-      <!-- TEXTOS -->
-      <div id="page-textos" class="page">
+      <div id="page-textos" class="page on">
         <div class="phdr">
           <span class="phdr-title">Editar Textos</span>
-          <span class="phdr-desc">Edite e publique os textos do site diretamente.</span>
-          <button class="btn outline" onclick="testarConexao()" id="btn-test-conn" style="margin-left:auto;font-size:.7rem;padding:6px 14px">🔌 Testar Conexão</button>
+          <span class="phdr-desc">Edite textos e publique direto no site (sem alterar o design).</span>
+          <button class="btn outline" style="margin-left:auto" onclick="recarregarHTMLs()">↻ Recarregar do site</button>
         </div>
         <div class="tabs">
           <button class="tab on" onclick="showTab(&#39;txt&#39;,&#39;home&#39;,this)">🏠 Home</button>
           <button class="tab" onclick="showTab(&#39;txt&#39;,&#39;aelcana&#39;,this)">🏥 A Elcana</button>
           <button class="tab" onclick="showTab(&#39;txt&#39;,&#39;contato&#39;,this)">📞 Contato</button>
-          <button class="tab" onclick="showTab(&#39;txt&#39;,&#39;tratamentos&#39;,this)">💆 Tratamentos</button>
         </div>
         <div class="scroll-area">
-          <div id="txt-home" class="tab-panel on" style="max-width:800px"></div>
-          <div id="txt-aelcana" class="tab-panel" style="max-width:800px"></div>
-          <div id="txt-contato" class="tab-panel" style="max-width:800px"></div>
-          <div id="txt-tratamentos" class="tab-panel" style="max-width:800px"></div>
+          <div id="txt-home" class="tab-panel on" style="max-width:820px"></div>
+          <div id="txt-aelcana" class="tab-panel" style="max-width:820px"></div>
+          <div id="txt-contato" class="tab-panel" style="max-width:820px"></div>
         </div>
       </div>
 
-      <!-- CONFIG -->
       <div id="page-config" class="page">
         <div class="phdr"><span class="phdr-title">Configurações GitHub</span></div>
         <div class="scroll-area" style="max-width:700px">
           <div class="card">
             <span class="ctitle">Conexão com o Repositório</span>
             <div class="gh-status"><div class="gh-dot" id="dot"></div><span id="dot-txt">Não configurado</span></div>
-            <div class="cfg-field"><label>Token de Acesso</label><input type="password" id="cf-token" placeholder="ghp_..."></div>
-            <div class="cfg-field"><label>Usuário GitHub</label><input type="text" id="cf-user" placeholder="elcanaclinica" value="elcanaclinica"></div>
+            <div class="cfg-field"><label>Token de Acesso</label><input type="password" id="cf-token" placeholder="ghp_... ou github_pat_..."></div>
+            <div class="cfg-field"><label>Usuário/Org GitHub</label><input type="text" id="cf-user" placeholder="elcanaclinica" value="elcanaclinica"></div>
             <div class="cfg-field"><label>Repositório</label><input type="text" id="cf-repo" placeholder="websiteelcana" value="websiteelcana"></div>
             <div class="cfg-field"><label>Branch</label><input type="text" id="cf-branch" value="main"></div>
             <div class="tip-box">
-              <strong>Como criar o token:</strong><br>
-              1. github.com → sua foto → Settings<br>
-              2. Developer settings → Personal access tokens → Fine-grained tokens<br>
-              3. Generate new token → selecione o repositório<br>
-              4. Permissions: <strong>Contents → Read and write</strong><br>
-              5. Generate token → copie e cole acima
+              <strong>Token Fine-grained:</strong> Permissions → <strong>Contents: Read and write</strong> para o repositório selecionado.
             </div>
             <div style="display:flex;align-items:center;gap:14px;margin-top:4px">
               <button class="btn" onclick="saveConfig()" id="btn-save-cfg">💾 Salvar e Testar</button>
@@ -273,44 +204,41 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
         </div>
       </div>
 
-      <!-- INSTRUÇÕES -->
       <div id="page-instrucoes" class="page">
         <div class="phdr"><span class="phdr-title">Instruções de Uso</span></div>
         <div class="scroll-area" style="max-width:750px">
           <div class="instr-card">
+            <div class="instr-head">⚠️ Como o editor funciona</div>
+            <div class="instr-body">
+              <div class="instr-item"><strong>Não altera o design</strong><p>O editor lê o HTML atual do site no GitHub e troca apenas o trecho de texto/imagem que você editou. CSS, layout e estrutura permanecem intactos.</p></div>
+              <div class="instr-item"><strong>Como editar textos</strong><p>Cada campo mostra o "Texto atual no site" (como está agora) e o "Novo texto" (o que você quer). Ao clicar em Publicar, o editor faz: HTML.replace(atual, novo). Se o "atual" não estiver idêntico ao que está no site, ajuste primeiro.</p></div>
+              <div class="instr-item"><strong>Botão Recarregar do site</strong><p>Atualiza os campos "atual" com o que está no GitHub neste momento, caso tenha sido alterado manualmente.</p></div>
+            </div>
+          </div>
+          <div class="instr-card">
             <div class="instr-head">🚀 Primeiros Passos</div>
             <div class="instr-body">
-              <div class="instr-item"><strong>1. Configure o GitHub</strong><p>Vá em ⚙️ Configurações, cole o token, usuário e repositório. Clique em "Salvar e Testar".</p></div>
-              <div class="instr-item"><strong>2. Troque imagens</strong><p>Vá em 🖼️ Imagens, escolha a aba, clique em "Trocar" e selecione a foto.</p></div>
-              <div class="instr-item"><strong>3. Edite textos</strong><p>Vá em ✏️ Textos, edite o campo e clique em "Publicar no Site".</p></div>
-              <div class="instr-item"><strong>4. Aguarde</strong><p>O site atualiza em 1–2 minutos após cada publicação.</p></div>
+              <div class="instr-item"><strong>1. Configure o GitHub</strong><p>Configurações → cole o token e clique em Salvar e Testar.</p></div>
+              <div class="instr-item"><strong>2. Edite textos</strong><p>Textos → ajuste o "Novo texto" → Publicar no Site.</p></div>
+              <div class="instr-item"><strong>3. Troque imagens</strong><p>Imagens → escolha a aba → Trocar → selecione a foto.</p></div>
+              <div class="instr-item"><strong>4. Aguarde</strong><p>O GitHub Pages atualiza em 1–2 minutos.</p></div>
             </div>
           </div>
           <div class="instr-card">
-            <div class="instr-head">🖼️ Sobre as Imagens</div>
+            <div class="instr-head">📞 Acesso</div>
             <div class="instr-body">
-              <div class="instr-item"><strong>Formatos aceitos</strong><p>JPG, PNG e WEBP — máximo 5MB por imagem.</p></div>
-              <div class="instr-item"><strong>Tamanhos ideais</strong><p>Hero/fundo: 1920×1280px (paisagem)\nFotos de tratamentos: 800×600px ou maior</p></div>
-              <div class="instr-item"><strong>Como usar</strong><p>Clique em "Trocar", selecione ou arraste a foto, aguarde "✓ Publicado!"</p></div>
-            </div>
-          </div>
-          <div class="instr-card">
-            <div class="instr-head">📞 Suporte</div>
-            <div class="instr-body">
-              <div class="instr-item"><strong>Acesso ao painel</strong><p>Usuário: admin | Senha: elcana2025</p></div>
-              <div class="instr-item"><strong>Dúvidas</strong><p>Entre em contato com o desenvolvedor do site.</p></div>
+              <div class="instr-item"><strong>Login</strong><p>Usuário: admin | Senha: elcana2025</p></div>
             </div>
           </div>
         </div>
       </div>
 
-    </div><!-- /main -->
-  </div><!-- /layout -->
+    </div>
+  </div>
 
   <div class="statusbar" id="statusbar">Pronto.</div>
-</div><!-- /painel -->
+</div>
 
-<!-- MODAL TROCAR IMAGEM -->
 <div class="modal-bg" id="modal">
   <div class="modal">
     <h3>Trocar Imagem</h3>
@@ -329,894 +257,473 @@ body{font-family:'Jost',sans-serif;background:var(--cinza);color:var(--texto)}
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
-// ══════════════════════════════════════════════
-// DADOS
-// ══════════════════════════════════════════════
-// O admin não mantém HTML do site embutido.
-// Textos são publicados sempre sobre o HTML atual lido do repositório alvo.
-
+// ─── Credenciais ──────────────────────────────
 const CREDS = { u:'admin', p:'elcana2025' };
 
+// ─── Imagens (caminho relativo dentro do repo) ─────────────
 const IMAGENS = {
   home:[
-    {l:'Fundo Hero (aquarela)',      f:'imagens/elcana_textura.png'},
-    {l:'Fundo Seção Parallax',       f:'imagens/elcana_textura2.png'},
-    {l:'Foto — Seção Sobre',         f:'imagens/foto2.png'},
-    {l:'Card Tratamentos Faciais',   f:'imagens/PELE.png'},
+    {l:'Foto principal (home)',  f:'imagens/foto1.png'},
+    {l:'Foto seção Sobre',       f:'imagens/foto2.png'},
+    {l:'Card Tratamentos Faciais', f:'imagens/PELE.png'},
     {l:'Card Tratamentos Corporais', f:'imagens/GLUTEO.png'},
-    {l:'Card Tecnologias',           f:'imagens/Equipamentos.png'},
+    {l:'Card Tecnologias',       f:'imagens/Equipamentos.png'},
+    {l:'Pele Madura (destaque)', f:'imagens/Pele_Madura2-1.jpg'},
   ],
   trat:[
-    {l:'Harmonização Facial',        f:'imagens/PELE.png'},
-    {l:'Botox',                      f:'imagens/BOTOX2.png'},
-    {l:'Bioestimuladores',           f:'imagens/botox.png'},
-    {l:'Ácido Hialurônico',          f:'imagens/Pele_Madura1.jpg'},
-    {l:'Lavieen',                    f:'imagens/LAVIEEN2.png'},
-    {l:'Ultraformer MPT (Face)',     f:'imagens/ULTRA1.png'},
-    {l:'Harmonização Glútea',        f:'imagens/GLUTEO.png'},
-    {l:'Ultraformer MPT (Corpo)',    f:'imagens/ULTRA2.png'},
-    {l:'Bioestimuladores (Corpo)',   f:'imagens/PERNAS.png'},
-    {l:'Emptiers',                   f:'imagens/barriga2.png'},
-  ],
-  tec:[
-    {l:'Ultraformer MPT',            f:'imagens/Ultraformer.png'},
-    {l:'Lavieen',                    f:'imagens/LAVIEEN2.png'},
-    {l:'Equipamentos',               f:'imagens/Equipamentos.png'},
+    {l:'Harmonização Facial',    f:'imagens/PELE.png'},
+    {l:'Botox 1',                f:'imagens/botox.png'},
+    {l:'Botox 2',                f:'imagens/BOTOX2.png'},
+    {l:'Pele Madura 1',          f:'imagens/Pele_Madura1.jpg'},
+    {l:'Pele Madura 2',          f:'imagens/Pele_Madura2.jpg'},
+    {l:'Lavieen',                f:'imagens/lavieen.png'},
+    {l:'Lavieen 2',              f:'imagens/LAVIEEN2.png'},
+    {l:'Ultraformer 1',          f:'imagens/ULTRA1.png'},
+    {l:'Ultraformer 2',          f:'imagens/ULTRA2.png'},
+    {l:'Harmonização Glútea',    f:'imagens/GLUTEO.png'},
+    {l:'Pernas (Bio Corpo)',     f:'imagens/PERNAS.png'},
+    {l:'Barriga (Emptiers)',     f:'imagens/barriga2.png'},
   ],
   geral:[
-    {l:'Logo principal',             f:'imagens/Elcana_d9dae7.png'},
-    {l:'Logo versão clara',          f:'imagens/Elcana_354d5b.png'},
-    {l:'Favicon',                    f:'imagens/Favi_Elcana.png'},
+    {l:'Logo principal (escuro)', f:'imagens/Elcana_d9dae7.png'},
+    {l:'Logo claro',              f:'imagens/Elcana_354d5b.png'},
+    {l:'Favicon original',        f:'imagens/Favi_Elcana.png'},
+    {l:'Favicon 32×32',           f:'imagens/cropped-Favi_Elcana-32x32.png'},
+    {l:'Favicon 150×150',         f:'imagens/cropped-Favi_Elcana-150x150.png'},
+    {l:'Favicon 180×180',         f:'imagens/cropped-Favi_Elcana-180x180.png'},
+    {l:'Favicon 192×192',         f:'imagens/cropped-Favi_Elcana-192x192.png'},
   ],
 };
 
+// ─── Textos: cada campo aponta para um arquivo HTML e tem "valor atual" padrão ──
+// O editor irá buscar/substituir o "atual" → "novo" no HTML real do GitHub.
 const TEXTOS = {
   home:[
-    {l:'Frase do Hero',       k:'hero_frase',   t:'input', v:'A arte de cuidar de você.'},
-    {l:'Título Seção Sobre',  k:'sobre_titulo', t:'input', v:'Aqui, cada detalhe importa.'},
-    {l:'Texto Seção Sobre',   k:'sobre_texto',  t:'textarea', v:'Do ambiente acolhedor ao atendimento atencioso, da escolha dos equipamentos mais modernos ao toque humano que respeita e valoriza sua individualidade. Trabalhamos com a mais alta tecnologia estética, mas sem jamais perder de vista o que nos move: a empatia, o acolhimento e o compromisso em realçar aquilo que já é belo em você.'},
-    {l:'Texto Botão WhatsApp',k:'cta_btn',      t:'input', v:'Falar no WhatsApp'},
+    {l:'Frase principal (Hero)', k:'hero',     file:'index.html', t:'input',
+     v:'A arte de cuidar de você.'},
+    {l:'Título "Aqui, cada detalhe importa"', k:'sobre_tit', file:'index.html', t:'input',
+     v:'Aqui, cada detalhe importa.'},
+    {l:'Texto da seção Sobre', k:'sobre_txt', file:'index.html', t:'textarea',
+     v:'Do ambiente acolhedor ao atendimento atencioso, da escolha dos equipamentos mais modernos ao toque humano que respeita e valoriza sua individualidade.'},
   ],
   aelcana:[
-    {l:'Título Principal',    k:'ae_titulo',    t:'input',    v:'Cuidar, para nós, é uma arte.'},
-    {l:'Parágrafo 1',         k:'ae_p1',        t:'textarea', v:'É ouvir com o coração, entender seus sonhos e desenhar caminhos personalizados para que você se redescubra mais forte, confiante e radiante.'},
-    {l:'Parágrafo 2',         k:'ae_p2',        t:'textarea', v:'Cada resultado é tão único quanto você. Através de tratamentos personalizados, proporcionamos mais do que transformações estéticas.'},
+    {l:'Título "Cuidar, para nós, é uma arte."', k:'ae_tit', file:'a-elcana.html', t:'input',
+     v:'Cuidar, para nós, é uma arte.'},
+    {l:'Parágrafo "É ouvir com o coração..."', k:'ae_p1', file:'a-elcana.html', t:'textarea',
+     v:'É ouvir com o coração, entender seus sonhos e desenhar caminhos personalizados para que você se redescubra mais forte, confiante e radiante.'},
+    {l:'Parágrafo "Cada resultado é tão único..."', k:'ae_p2', file:'a-elcana.html', t:'textarea',
+     v:'Cada resultado é tão único quanto você. Através de tratamentos personalizados, proporcionamos mais do que transformações estéticas.'},
   ],
   contato:[
-    {l:'Telefone',            k:'tel',          t:'input', v:'(41) 3010-1398'},
-    {l:'WhatsApp (com DDI)',  k:'whatsapp',     t:'input', v:'5541999538779', d:'Apenas números, com DDI: 5541999999999'},
-    {l:'E-mail',              k:'email',        t:'input', v:'contato@clinicaelcana.com.br'},
-    {l:'Endereço',            k:'endereco',     t:'input', v:'Av. Nossa Senhora de Lourdes, 630 – Curitiba, PR'},
-    {l:'Instagram (sem @)',   k:'instagram',    t:'input', v:'clinicaelcana'},
-  ],
-  tratamentos:[
-    {l:'Harmonização Facial — Título', k:'t1_h', t:'input',    v:'Harmonização Facial'},
-    {l:'Harmonização Facial — Chamada',k:'t1_s', t:'input',    v:'Realce sutil da sua beleza.'},
-    {l:'Harmonização Facial — Texto',  k:'t1_p', t:'textarea', v:'Com técnicas como preenchimento, bioestimuladores e toxina botulínica, a harmonização facial suaviza rugas, redefine contornos e melhora a harmonia dos traços, sem perder a naturalidade.'},
-    {l:'Botox — Título',               k:'t2_h', t:'input',    v:'Botox'},
-    {l:'Botox — Chamada',              k:'t2_s', t:'input',    v:'Beleza leve e natural.'},
-    {l:'Botox — Texto',                k:'t2_p', t:'textarea', v:'Na Elcana, utilizamos técnicas refinadas para preservar a sua essência, realçando sua beleza com delicadeza e precisão.'},
-    {l:'Bioestimuladores — Título',    k:'t3_h', t:'input',    v:'Bioestimuladores de Colágeno'},
-    {l:'Bioestimuladores — Chamada',   k:'t3_s', t:'input',    v:'Revitalize a estrutura da sua pele.'},
-    {l:'Bioestimuladores — Texto',     k:'t3_p', t:'textarea', v:'Os bioestimuladores oferecem uma solução natural e gradual para restaurar a firmeza, a textura e a juventude da pele.'},
-    {l:'Ácido Hialurônico — Título',   k:'t4_h', t:'input',    v:'Ácido Hialurônico'},
-    {l:'Ácido Hialurônico — Chamada',  k:'t4_s', t:'input',    v:'Preencha, hidrate e ilumine.'},
-    {l:'Ácido Hialurônico — Texto',    k:'t4_p', t:'textarea', v:'O Ácido Hialurônico devolve volume, hidrata profundamente e suaviza rugas e sulcos com extrema naturalidade.'},
-    {l:'Lavieen — Título',             k:'t5_h', t:'input',    v:'Lavieen'},
-    {l:'Lavieen — Chamada',            k:'t5_s', t:'input',    v:'Renove sua pele, revele sua luz.'},
-    {l:'Lavieen — Texto',              k:'t5_p', t:'textarea', v:'O Lavieen é uma tecnologia que trabalha de maneira inteligente para renovar sua pele de dentro para fora.'},
-    {l:'Ultraformer MPT — Título',     k:'t6_h', t:'input',    v:'Ultraformer MPT'},
-    {l:'Ultraformer MPT — Chamada',    k:'t6_s', t:'input',    v:'Lifting não cirúrgico, beleza que se revela.'},
-    {l:'Ultraformer MPT — Texto',      k:'t6_p', t:'textarea', v:'O Ultraformer MPT utiliza ultrassom microfocado, atuando nas camadas profundas da pele.'},
-    {l:'Harmonização Glútea — Título', k:'t7_h', t:'input',    v:'Harmonização Glútea'},
-    {l:'Harmonização Glútea — Chamada',k:'t7_s', t:'input',    v:'Contornos mais definidos, com naturalidade.'},
-    {l:'Harmonização Glútea — Texto',  k:'t7_p', t:'textarea', v:'A harmonização glútea remodela os glúteos com preenchimento e bioestimuladores.'},
-    {l:'Ultraformer Corpo — Título',   k:'t8_h', t:'input',    v:'Ultraformer MPT (Corpo)'},
-    {l:'Ultraformer Corpo — Chamada',  k:'t8_s', t:'input',    v:'Firmeza e definição em cada curva.'},
-    {l:'Ultraformer Corpo — Texto',    k:'t8_p', t:'textarea', v:'Combate a flacidez corporal e remodela áreas específicas com precisão e resultados progressivos.'},
-    {l:'Bioestimuladores Corpo — Título', k:'t9_h', t:'input',    v:'Bioestimuladores (Corpo)'},
-    {l:'Bioestimuladores Corpo — Chamada',k:'t9_s', t:'input',    v:'Pele mais firme e revitalizada.'},
-    {l:'Bioestimuladores Corpo — Texto',  k:'t9_p', t:'textarea', v:'Estimula o colágeno em regiões como braços, abdômen, colo e pernas.'},
-    {l:'Emptiers — Título',            k:'t10_h', t:'input',    v:'Emptiers'},
-    {l:'Emptiers — Chamada',           k:'t10_s', t:'input',    v:'Contornos mais definidos, autoestima renovada.'},
-    {l:'Emptiers — Texto',             k:'t10_p', t:'textarea', v:'Os Emptiers são soluções modernas para eliminar pequenas áreas de gordura localizada.'},
+    {l:'Telefone', k:'tel', file:'contato.html', t:'input', v:'(41) 3010-1398'},
+    {l:'WhatsApp (número com DDI, só dígitos)', k:'whats', file:'contato.html', t:'input',
+     v:'5541999538779', d:'Será substituído em todas as ocorrências (links wa.me).'},
+    {l:'E-mail', k:'email', file:'contato.html', t:'input', v:'contato@clinicaelcana.com.br'},
+    {l:'Instagram (sem @)', k:'insta', file:'contato.html', t:'input', v:'clinicaelcana'},
   ],
 };
 
-// Mapa HTML por chave de texto
-const HTML_MAP = {
-  hero_frase:'index.html', sobre_titulo:'index.html', sobre_texto:'index.html', cta_btn:'index.html',
-  ae_titulo:'a-elcana.html', ae_p1:'a-elcana.html', ae_p2:'a-elcana.html',
-  tel:'contato.html', whatsapp:'contato.html', email:'contato.html',
-  endereco:'contato.html', instagram:'contato.html',
-};
-for(let n=1;n<=10;n++) {
-  HTML_MAP[`t${n}_h`]='tratamentos.html';
-  HTML_MAP[`t${n}_s`]='tratamentos.html';
-  HTML_MAP[`t${n}_p`]='tratamentos.html';
-}
+// O número do WhatsApp aparece em todas as páginas — propagar:
+const TEXTOS_GLOBAIS = ['whats'];
+const ARQUIVOS_HTML  = ['index.html','a-elcana.html','tratamentos.html','tecnologias.html','contato.html'];
 
-// ── VALORES ATUAIS ────────────────────────────────────────
-// Mantém o valor atualmente publicado de cada chave (snapshot).
-// Permite editar repetidamente pois sempre sabemos qual texto procurar/substituir.
-function getValoresAtuais() {
-  const saved = JSON.parse(localStorage.getItem('elcana_valores') || '{}');
-  // Garante defaults para todas as chaves do TEXTOS
-  Object.values(TEXTOS).forEach(cat => cat.forEach(f => {
-    if (saved[f.k] === undefined) saved[f.k] = f.v;
-  }));
-  return saved;
-}
-function setValorAtual(key, val) {
-  const v = getValoresAtuais();
-  v[key] = val;
-  localStorage.setItem('elcana_valores', JSON.stringify(v));
-}
-function getValorAtual(key) {
-  return getValoresAtuais()[key];
-}
-
-// Escapa HTML (& < > " ') para casar com o que o navegador/WordPress salva
-function htmlEscape(s) {
-  return String(s)
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;');
-}
-// Tenta encontrar o texto no HTML (testa formas plain e escaped)
-function findVariant(html, text) {
-  if (!text) return null;
-  if (html.indexOf(text) !== -1) return text;
-  const esc = htmlEscape(text);
-  if (esc !== text && html.indexOf(esc) !== -1) return esc;
-  // Tenta normalizando espaços do texto procurado vs HTML (colapsa whitespace consecutivo)
-  // (procura no HTML preservando posição é caro; só usamos isso pra detecção)
-  return null;
-}
-
-const TRAT_IDS = {t1:'harmonizacao',t2:'botox',t3:'bioestimuladores',t4:'acido',
-  t5:'lavieen',t6:'ultraformer',t7:'glutea',t8:'ultraformer-corpo',t9:'bio-corpo',t10:'emptiers'};
-
-// ══════════════════════════════════════════════
-// ESTADO
-// ══════════════════════════════════════════════
+// ─── Estado ────────────────────────────────────
 let CFG = {};
 let imgAtual = null, fileNovo = null;
+// cache em memória do HTML por arquivo + SHA correspondente
+let HTML_CACHE = {}; // { 'index.html': { content, sha } }
 
-// ══════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════
+// ─── Init ──────────────────────────────────────
 function init() {
-  CFG = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
-  // Defaults para o repositório público do site; nunca apontar para o repo do admin.
+  CFG = JSON.parse(localStorage.getItem('elcana_cfg_v4') || '{}');
   if (!CFG.user) CFG.user = 'elcanaclinica';
-  if (!CFG.repo || CFG.repo === 'administrador' || CFG.repo === 'siteelcana') CFG.repo = 'websiteelcana';
+  if (!CFG.repo) CFG.repo = 'websiteelcana';
   if (!CFG.branch) CFG.branch = 'main';
-  if (CFG.token && CFG.user && CFG.repo) {
-    document.getElementById('cf-token').value = CFG.token;
-    document.getElementById('cf-user').value  = CFG.user;
-    document.getElementById('cf-repo').value  = CFG.repo;
-    document.getElementById('cf-branch').value= CFG.branch || 'main';
-    updateBadge(true);
-    updateSiteUrl();
-    // Atualiza SHAs imediatamente ao abrir (garante SHA sempre fresco)
-    fetchAllSHAs().then(() => {
-      loadAllImages();
-    });
-    // Cache images após SHAs carregados
-    setTimeout(cacheAllImages, 4000);
+  ['token','user','repo','branch'].forEach(k=>{
+    const el = document.getElementById('cf-'+k);
+    if (el && CFG[k]) el.value = CFG[k];
+  });
+  if (CFG.token) {
+    updateBadge(true); updateSiteUrl();
+    recarregarHTMLs(); // busca HTML real do GitHub
   }
   buildTextFields();
+  buildImageGrids();
 }
-
-function updateBadge(ok) {
-  const b = document.getElementById('gh-badge');
+function updateBadge(ok){
+  const b=document.getElementById('gh-badge');
   b.textContent = ok ? `● ${CFG.user}/${CFG.repo}` : '○ não configurado';
   b.style.color = ok ? '#c9a96e' : '#aaa';
 }
-
-function updateSiteUrl() {
+function updateSiteUrl(){
   const url = CFG.user && CFG.repo ? `https://${CFG.user}.github.io/${CFG.repo}` : '—';
   document.getElementById('site-url').textContent = url;
-  const btn = document.getElementById('btn-ver-site');
-  if (CFG.user && CFG.repo) { btn.href = url; }
+  const btn=document.getElementById('btn-ver-site'); if(CFG.user&&CFG.repo) btn.href=url;
 }
+function setStatus(msg){ document.getElementById('statusbar').textContent = msg; }
 
-function setStatus(msg) {
-  document.getElementById('statusbar').textContent = msg;
-}
-
-// ══════════════════════════════════════════════
-// LOGIN
-// ══════════════════════════════════════════════
-function doLogin() {
-  const u = document.getElementById('lu').value;
-  const p = document.getElementById('lp').value;
-  if (u===CREDS.u && p===CREDS.p) {
-    document.getElementById('login').style.display = 'none';
-    document.getElementById('painel').style.display = 'flex';
+// ─── Login ─────────────────────────────────────
+function doLogin(){
+  const u=document.getElementById('lu').value, p=document.getElementById('lp').value;
+  if (u===CREDS.u && p===CREDS.p){
+    document.getElementById('login').style.display='none';
+    document.getElementById('painel').style.display='flex';
     init();
-  } else {
-    document.getElementById('lerr').style.display = 'block';
-  }
+  } else document.getElementById('lerr').style.display='block';
 }
-function doLogout() {
-  document.getElementById('login').style.display = 'flex';
-  document.getElementById('painel').style.display = 'none';
-  document.getElementById('lu').value = '';
-  document.getElementById('lp').value = '';
-}
-document.addEventListener('keydown', e => {
-  if (e.key==='Enter' && document.getElementById('login').style.display!=='none') doLogin();
-});
-
-// ══════════════════════════════════════════════
-// NAVEGAÇÃO
-// ══════════════════════════════════════════════
-function showPage(name, el) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('on'));
-  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('on'));
-  document.getElementById('page-'+name).classList.add('on');
-  el.classList.add('on');
+function doLogout(){
+  document.getElementById('login').style.display='flex';
+  document.getElementById('painel').style.display='none';
+  document.getElementById('lu').value=''; document.getElementById('lp').value='';
 }
 
-function showTab(prefix, name, btn) {
+// ─── Nav ───────────────────────────────────────
+function showPage(name, el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.sb-item').forEach(i=>i.classList.remove('on'));
+  document.getElementById('page-'+name).classList.add('on'); el.classList.add('on');
+}
+function showTab(prefix, name, btn){
   const wrap = btn.parentElement;
-  wrap.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
-  btn.classList.add('on');
-  const panels = wrap.nextElementSibling.querySelectorAll('.tab-panel');
-  panels.forEach(p => p.classList.remove('on'));
+  wrap.querySelectorAll('.tab').forEach(t=>t.classList.remove('on')); btn.classList.add('on');
+  wrap.nextElementSibling.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('on'));
   document.getElementById(prefix+'-'+name).classList.add('on');
 }
 
-// ══════════════════════════════════════════════
-// GITHUB API
-// ══════════════════════════════════════════════
-function ghHeaders(opts = {}) {
-  const headers = {
-    'Accept': 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
-  };
-  if (opts.json) headers['Content-Type'] = 'application/json';
-  if (opts.auth !== false && CFG.token) headers['Authorization'] = `Bearer ${CFG.token}`;
-  return headers;
+// ─── GitHub API ────────────────────────────────
+function ghHeaders(){
+  return { 'Authorization':`token ${CFG.token}`, 'Accept':'application/vnd.github.v3+json' };
 }
-
-const SITE_REPO_FALLBACKS = ['websiteelcana', 'siteelcana'];
-
-function encodedPath(path) {
-  return String(path).split('/').map(encodeURIComponent).join('/');
+async function ghGet(path){
+  const r = await fetch(`https://api.github.com/repos/${CFG.user}/${CFG.repo}/contents/${path}?ref=${CFG.branch||'main'}`,
+    { headers:{...ghHeaders(),'Cache-Control':'no-store'}, cache:'no-store' });
+  if (!r.ok) return null;
+  return r.json();
 }
-
-function ghContentUrl(repo, path, includeRef = true) {
-  const qs = new URLSearchParams({ t: String(Date.now()) });
-  if (includeRef && CFG.branch) qs.set('ref', CFG.branch || 'main');
-  return `https://api.github.com/repos/${CFG.user}/${repo}/contents/${encodedPath(path)}?${qs.toString()}`;
-}
-
-function candidateRepos() {
-  const list = [CFG.repo, ...SITE_REPO_FALLBACKS].filter(Boolean);
-  return [...new Set(list)];
-}
-
-function setActiveRepo(repo) {
-  if (!repo || repo === CFG.repo) return;
-  CFG.repo = repo;
-  localStorage.setItem('elcana_cfg', JSON.stringify(CFG));
-  const input = document.getElementById('cf-repo');
-  if (input) input.value = repo;
-  updateBadge(true);
-  updateSiteUrl();
-}
-
-async function ghGetFromRepo(repo, path, useAuth = true) {
-  try {
-    const r = await fetch(ghContentUrl(repo, path), {
-      method: 'GET',
-      headers: ghHeaders({ auth: useAuth })
-    });
-    if (!r.ok) {
-      let errMsg = '';
-      try { const j = await r.json(); errMsg = j.message || ''; } catch(_) {}
-      return { ok:false, status:r.status, repo, data:null, errMsg };
-    }
-    const data = await r.json();
-    // Arquivo grande: API retorna mensagem em vez de content
-    if (data.message && !data.sha) {
-      return { ok:false, status:422, repo, data:null, errMsg: data.message };
-    }
-    return { ok:true, status:r.status, repo, data };
-  } catch(e) {
-    return { ok:false, status:0, repo, data:null, error:e, errMsg: 'Erro de rede: ' + e.message };
-  }
-}
-
-async function ghGet(path) {
-  let lastErr = '';
-  for (const repo of candidateRepos()) {
-    let res = await ghGetFromRepo(repo, path, true);
-    if (!res.ok && res.errMsg) lastErr = `[${res.status}] ${res.errMsg}`;
-    // Para repos públicos, tenta sem token em caso de qualquer erro de auth/rede
-    if (!res.ok) {
-      const publicRes = await ghGetFromRepo(repo, path, false);
-      if (publicRes.ok) res = publicRes;
-      else if (publicRes.errMsg) lastErr = `[${publicRes.status}] ${publicRes.errMsg}`;
-    }
-    if (res.ok && res.data) {
-      setActiveRepo(res.repo);
-      window._ghLastError = '';
-      return res.data;
-    }
-  }
-  // Armazena último erro para diagnóstico
-  window._ghLastError = lastErr || 'Sem resposta da API';
-  return null;
-}
-
-async function ghGetSHA(path) {
-  const d = await ghGet(path);
-  return d && d.sha ? { sha: d.sha } : null;
-}
-
-async function ghPut(path, b64, sha, msg) {
-  const body = { message: msg, content: b64, branch: CFG.branch || 'main' };
+async function ghPut(path, b64, sha, msg){
+  const body = { message: msg, content: b64, branch: CFG.branch||'main' };
   if (sha) body.sha = sha;
-  const r = await fetch(
-    ghContentUrl(CFG.repo, path, false),
-    { method:'PUT', headers: ghHeaders({ json:true }), body:JSON.stringify(body) }
-  );
-  const data = await r.json().catch(() => ({}));
-  const message = data.message || '';
-  const isConflict = r.status === 409 || message.includes('does not match');
-  const newSha = data.content ? data.content.sha : null;
-  return { ok: r.ok, msg: message, conflict: isConflict, newSha, status: r.status };
+  const r = await fetch(`https://api.github.com/repos/${CFG.user}/${CFG.repo}/contents/${path}`,
+    { method:'PUT', headers:{...ghHeaders(),'Content-Type':'application/json'}, body:JSON.stringify(body) });
+  const d = await r.json();
+  return { ok:r.ok, status:r.status, msg:d.message||'', newSha: d.content?d.content.sha:null,
+           conflict: r.status===409 || (d.message&&/does not match|sha/i.test(d.message)) };
 }
 
-// ══════════════════════════════════════════════
-// CONFIGURAÇÃO
-// ══════════════════════════════════════════════
-async function saveConfig() {
-  const btn = document.getElementById('btn-save-cfg');
-  const st  = document.getElementById('cfg-status');
+// ─── Config ────────────────────────────────────
+async function saveConfig(){
+  const btn=document.getElementById('btn-save-cfg'), st=document.getElementById('cfg-status');
   CFG = {
     token:  document.getElementById('cf-token').value.trim(),
     user:   document.getElementById('cf-user').value.trim(),
     repo:   document.getElementById('cf-repo').value.trim(),
     branch: document.getElementById('cf-branch').value.trim() || 'main',
   };
-  if (!CFG.token || !CFG.user || !CFG.repo) {
-    st.textContent = '✗ Preencha todos os campos.'; st.style.color='var(--verm)'; return;
-  }
-  localStorage.setItem('elcana_cfg', JSON.stringify(CFG));
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spin"></span>Testando...';
-  st.textContent = '';
-
+  if (!CFG.token||!CFG.user||!CFG.repo){ st.textContent='✗ Preencha todos os campos.'; st.style.color='var(--verm)'; return; }
+  localStorage.setItem('elcana_cfg_v4', JSON.stringify(CFG));
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span>Testando...';
   try {
     const r = await fetch(`https://api.github.com/repos/${CFG.user}/${CFG.repo}`, { headers: ghHeaders() });
-    if (r.ok) {
-      document.getElementById('dot').className = 'gh-dot ok';
-      document.getElementById('dot-txt').textContent = `Conectado: ${CFG.user}/${CFG.repo}`;
-      st.textContent = '✓ Conexão OK! Carregando SHAs...'; st.style.color = 'var(--verde)';
+    if (r.ok){
+      document.getElementById('dot').className='gh-dot ok';
+      document.getElementById('dot-txt').textContent=`Conectado: ${CFG.user}/${CFG.repo}`;
+      st.textContent='✓ Conexão OK! Carregando HTMLs e imagens...'; st.style.color='var(--verde)';
       updateBadge(true); updateSiteUrl();
-      // Busca e armazena SHAs de todos os HTMLs enquanto tem conexão
-      await fetchAllSHAs();
-      st.textContent = '✓ Tudo pronto!'; st.style.color = 'var(--verde)';
-      setStatus('GitHub configurado!');
-      setTimeout(loadAllImages, 400);
-      showToast('✓ GitHub configurado com sucesso!', 'ok');
-      setTimeout(cacheAllImages, 5000);
+      await recarregarHTMLs();
+      loadAllImages();
+      st.textContent='✓ Tudo pronto!'; showToast('GitHub conectado!','ok');
     } else {
-      document.getElementById('dot').className = 'gh-dot err';
-      document.getElementById('dot-txt').textContent = 'Erro na conexão';
-      st.textContent = '✗ Token ou repositório inválido.'; st.style.color = 'var(--verm)';
+      document.getElementById('dot').className='gh-dot err';
+      document.getElementById('dot-txt').textContent='Erro: '+r.status;
+      st.textContent='✗ Token ou repositório inválido ('+r.status+').'; st.style.color='var(--verm)';
       updateBadge(false);
     }
-  } catch(e) {
-    st.textContent = '✗ Erro de rede: ' + e.message; st.style.color='var(--verm)';
-  }
-  btn.disabled = false; btn.innerHTML = '💾 Salvar e Testar';
+  } catch(e){ st.textContent='✗ '+e.message; st.style.color='var(--verm)'; }
+  btn.disabled=false; btn.innerHTML='💾 Salvar e Testar';
 }
 
-async function fetchAllSHAs() {
-  // Busca SHAs dos HTMLs + imagens principais sempre no repositório alvo atual.
-  const htmlFiles = ['index.html','a-elcana.html','contato.html','tratamentos.html'];
-  const imgFiles  = [...IMAGENS.home,...IMAGENS.trat,...IMAGENS.tec,...IMAGENS.geral].map(i=>i.f);
-  const allFiles  = [...htmlFiles, ...imgFiles];
-  const shas = JSON.parse(localStorage.getItem('elcana_shas') || '{}');
-  for (const f of allFiles) {
-    const d = await ghGet(f);
-    if (d && d.sha) {
-      shas[f] = d.sha;
-      if (d.download_url) localStorage.setItem('img_'+f, d.download_url);
-    }
-  }
-  localStorage.setItem('elcana_shas', JSON.stringify(shas));
-  return shas;
-}
-
-function getSHA(file) {
-  const shas = JSON.parse(localStorage.getItem('elcana_shas') || '{}');
-  return shas[file] || null;
-}
-
-// ── Cache de imagens no localStorage ─────────────────────
-async function cacheAllImages() {
-  setStatus('Carregando previews das imagens...');
-  const allImgs = [...IMAGENS.home,...IMAGENS.trat,...IMAGENS.tec,...IMAGENS.geral];
-  let loaded = 0;
-  for (const item of allImgs) {
-    const d = await ghGet(item.f);
-    if (d && d.download_url) {
-      localStorage.setItem('img_'+item.f, d.download_url);
-      loaded++;
-    }
-  }
-  setStatus(`✓ ${loaded} imagens em cache. Recarregue a página de Imagens.`);
-  loadAllImages();
-}
-
-function saveSHA(file, sha) {
-  const shas = JSON.parse(localStorage.getItem('elcana_shas') || '{}');
-  shas[file] = sha;
-  localStorage.setItem('elcana_shas', JSON.stringify(shas));
-}
-
-// ══════════════════════════════════════════════
-// IMAGENS
-// ══════════════════════════════════════════════
-function buildImageGrid(gridId, items) {
-  const g = document.getElementById(gridId);
-  g.innerHTML = '';
-  items.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'icard';
-    card.id = 'card-'+item.f.replace(/[^a-z0-9]/gi,'_');
-    card.innerHTML = `
-      <div class="icard-img-placeholder" id="ph-${card.id}">⏳ Carregando...</div>
-      <div class="icard-body">
-        <span class="icard-label">${item.l}</span>
-        <p class="icard-name">${item.f.split('/')[1]}</p>
-        <button class="ibtn" onclick="openModal('${item.f}','${item.l}')">🔄 Trocar Imagem</button>
-        <p class="icard-status" id="st-${card.id}"></p>
-      </div>`;
-    g.appendChild(card);
-  });
-}
-
-async function loadImageCard(item) {
-  if (!CFG.token) return;
-  const cardId = 'card-'+item.f.replace(/[^a-z0-9]/gi,'_');
-  const ph = document.getElementById('ph-'+cardId);
-  if (!ph) return;
-
-  // Try localStorage cache first (instant load)
-  const cached = localStorage.getItem('img_'+item.f);
-  if (cached) {
-    const img = document.createElement('img');
-    img.className = 'icard-img';
-    img.alt = item.l;
-    img.src = cached + '?t=' + (localStorage.getItem('img_ts_'+item.f) || '0');
-    img.onerror = () => fetchImageCard(item, ph);
-    img.onload  = () => { if (ph.parentNode) ph.replaceWith(img); };
-    return;
-  }
-  // No cache: fetch from GitHub
-  fetchImageCard(item, ph);
-}
-
-async function fetchImageCard(item, ph) {
-  try {
-    const data = await ghGet(item.f);
-    if (!data || !data.download_url) {
-      ph.textContent = '✗ Não encontrada'; ph.style.color='var(--verm)'; return;
-    }
-    localStorage.setItem('img_'+item.f, data.download_url);
-    const img = document.createElement('img');
-    img.className = 'icard-img';
-    img.alt = item.l;
-    img.src = data.download_url + '?t=' + Date.now();
-    img.onerror = () => { ph.textContent = '✗ Erro ao carregar'; ph.style.color='var(--verm)'; };
-    img.onload  = () => { if (ph.parentNode) ph.replaceWith(img); };
-  } catch(e) {
-    ph.textContent = '✗ Erro'; ph.style.color='var(--verm)';
-  }
-}
-
-function loadAllImages() {
-  buildImageGrid('grid-home',  IMAGENS.home);
-  buildImageGrid('grid-trat',  IMAGENS.trat);
-  buildImageGrid('grid-tec',   IMAGENS.tec);
-  buildImageGrid('grid-geral', IMAGENS.geral);
-  // Load with delay to avoid rate limiting
-  const all = [...IMAGENS.home,...IMAGENS.trat,...IMAGENS.tec,...IMAGENS.geral];
-  all.forEach((item,i) => setTimeout(() => loadImageCard(item), i*200));
-}
-
-// ══════════════════════════════════════════════
-// MODAL IMAGEM
-// ══════════════════════════════════════════════
-function openModal(file, label) {
-  imgAtual = file; fileNovo = null;
-  document.getElementById('modal-label').textContent = label;
-  document.getElementById('preview').style.display = 'none';
-  document.getElementById('file-in').value = '';
-  document.getElementById('modal-status').textContent = '';
-  document.getElementById('btn-confirmar').disabled = false;
-  document.getElementById('btn-confirmar').innerHTML = '✓ Confirmar e Publicar';
-  document.getElementById('modal').classList.add('on');
-}
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('on');
-}
-
-function onFileSelect(input) {
-  if (!input.files[0]) return;
-  if (input.files[0].size > 5*1024*1024) {
-    showToast('Arquivo muito grande! Máximo 5MB.','err'); return;
-  }
-  fileNovo = input.files[0];
-  const rd = new FileReader();
-  rd.onload = e => {
-    const pv = document.getElementById('preview');
-    pv.src = e.target.result; pv.style.display = 'block';
-  };
-  rd.readAsDataURL(fileNovo);
-}
-
-// Drag & drop
-const dz = document.getElementById('drop-zone');
-dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag'); });
-dz.addEventListener('dragleave', () => dz.classList.remove('drag'));
-dz.addEventListener('drop', e => {
-  e.preventDefault(); dz.classList.remove('drag');
-  const f = e.dataTransfer.files[0];
-  if (f && f.type.startsWith('image/')) {
-    document.getElementById('file-in').files;
-    fileNovo = f;
-    const rd = new FileReader();
-    rd.onload = ev => {
-      const pv = document.getElementById('preview');
-      pv.src = ev.target.result; pv.style.display = 'block';
-    };
-    rd.readAsDataURL(f);
-  }
-});
-
-async function publicarImagem() {
-  if (!fileNovo) { showToast('Selecione uma imagem primeiro!','err'); return; }
-  if (!CFG.token) { showToast('Configure o GitHub primeiro!','err'); return; }
-
-  const btn = document.getElementById('btn-confirmar');
-  const st  = document.getElementById('modal-status');
-
-  // Sempre recarregar CFG do localStorage para garantir token mais recente
-  const cfgFresh2 = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
-  if (cfgFresh2.token) Object.assign(CFG, cfgFresh2);
-
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spin"></span>Publicando...';
-  st.textContent = 'Enviando para o GitHub...';
-  setStatus(`Publicando ${imgAtual}...`);
-
-  try {
-    const b64 = await toBase64(fileNovo);
-
-    // Usa SHA do localStorage (buscado durante configuração)
-    let sha = getSHA(imgAtual);
-
-    // Se não tem SHA em cache, busca agora
-    if (!sha) {
-      st.textContent = 'Obtendo versão atual...';
-      const data = await ghGet(imgAtual);
-      sha = data ? data.sha : null;
-      if (sha) saveSHA(imgAtual, sha);
-    }
-
-    const { ok, msg, conflict, newSha } = await ghPut(imgAtual, b64, sha, `Admin: atualiza ${imgAtual.split('/')[1]}`);
-
-    if (ok) {
-      // Atualiza SHA e cache da imagem
-      if (newSha) saveSHA(imgAtual, newSha);
-      localStorage.removeItem('img_' + imgAtual); // Força recarregar preview
-      st.textContent = '✓ Publicado! Site atualiza em 1–2 min.';
-      st.style.color = 'var(--verde)';
-      showToast(`✓ ${imgAtual.split('/')[1]} publicada!`, 'ok');
-      setStatus(`✓ ${imgAtual.split('/')[1]} publicada com sucesso!`);
-      closeModal();
-      setTimeout(loadAllImages, 1500);
-    } else if (conflict) {
-      // SHA conflitou - busca SHA fresco e tenta de novo
-      st.textContent = 'Conflito de versão, tentando novamente...';
-      const fresh = await ghGet(imgAtual);
-      if (fresh) {
-        saveSHA(imgAtual, fresh.sha);
-        const r2 = await ghPut(imgAtual, b64, fresh.sha, `Admin: atualiza ${imgAtual.split('/')[1]}`);
-        if (r2.ok) {
-          if (r2.newSha) saveSHA(imgAtual, r2.newSha);
-          localStorage.removeItem('img_' + imgAtual);
-          st.textContent = '✓ Publicado! Site atualiza em 1–2 min.';
-          st.style.color = 'var(--verde)';
-          showToast(`✓ ${imgAtual.split('/')[1]} publicada!`, 'ok');
-          closeModal();
-          setTimeout(loadAllImages, 1500);
-          return;
-        }
+// ─── Carrega HTMLs do GitHub para o cache + atualiza campos "atual" ──
+async function recarregarHTMLs(){
+  if (!CFG.token){ showToast('Configure o GitHub primeiro.','err'); return; }
+  setStatus('Carregando HTMLs do site...');
+  HTML_CACHE = {};
+  for (const f of ARQUIVOS_HTML){
+    try {
+      const d = await ghGet(f);
+      if (d && d.content){
+        // Conteúdo base64 com quebras de linha
+        const raw = atob(d.content.replace(/\n/g,''));
+        // Decodifica UTF-8
+        const txt = decodeURIComponent(escape(raw));
+        HTML_CACHE[f] = { content: txt, sha: d.sha };
       }
-      st.textContent = '✗ Conflito persistente. Tente novamente.';
-      st.style.color = 'var(--verm)';
-      btn.disabled = false;
-      btn.innerHTML = '✓ Confirmar e Publicar';
-    } else {
-      st.textContent = '✗ Erro: ' + msg;
-      st.style.color = 'var(--verm)';
-      btn.disabled = false;
-      btn.innerHTML = '✓ Confirmar e Publicar';
-    }
-  } catch(e) {
-    st.textContent = '✗ ' + e.message;
-    st.style.color = 'var(--verm)';
-    btn.disabled = false;
-    btn.innerHTML = '✓ Confirmar e Publicar';
+    } catch(e){ console.warn('Falhou', f, e); }
   }
+  setStatus(`✓ ${Object.keys(HTML_CACHE).length} HTMLs em cache.`);
+  // Atualiza os campos "atual" com o que foi encontrado
+  preencherAtuaisAposCarregar();
 }
 
-function toBase64(file) {
-  return new Promise((res,rej) => {
-    const rd = new FileReader();
-    rd.onload = () => res(rd.result.split(',')[1]);
-    rd.onerror = rej;
-    rd.readAsDataURL(file);
+function preencherAtuaisAposCarregar(){
+  Object.entries(TEXTOS).forEach(([cat, fields])=>{
+    fields.forEach(field=>{
+      const html = HTML_CACHE[field.file]?.content;
+      if (!html) return;
+      // Lê valor salvo previamente (se já editamos antes)
+      const stored = JSON.parse(localStorage.getItem('elcana_valores')||'{}');
+      const lastKnown = stored[field.k] || field.v;
+      const elAt = document.getElementById('at-'+field.k);
+      if (!elAt) return;
+      // Se o lastKnown ainda existe no HTML, mantém. Senão tenta detectar variantes.
+      if (html.includes(lastKnown)){
+        elAt.value = lastKnown;
+      } else {
+        // Tenta achar usando padrões heurísticos por chave
+        const detected = detectarAtual(field.k, html);
+        if (detected) elAt.value = detected;
+        // senão deixa o valor padrão
+      }
+    });
   });
 }
 
-// ══════════════════════════════════════════════
-// TEXTOS
-// ══════════════════════════════════════════════
-function buildTextFields() {
-  const valores = getValoresAtuais();
-  Object.entries(TEXTOS).forEach(([cat, fields]) => {
-    const container = document.getElementById('txt-'+cat);
-    container.innerHTML = '';
-    fields.forEach(field => {
-      const valAtual = valores[field.k] !== undefined ? valores[field.k] : field.v;
-      const inputEl = field.t === 'textarea'
-        ? `<textarea id="f-${field.k}" rows="3">${String(valAtual).replace(/</g,'&lt;')}</textarea>`
-        : `<input type="text" id="f-${field.k}" value="${String(valAtual).replace(/"/g,'&quot;')}">`;
-      const div = document.createElement('div');
-      div.className = 'field';
+// Heurísticas leves para tentar localizar trechos quando o último valor mudou
+function detectarAtual(key, html){
+  try {
+    if (key==='tel'){
+      const m = html.match(/\(\d{2}\)\s?\d{4,5}-?\d{4}/); return m?m[0]:null;
+    }
+    if (key==='whats'){
+      const m = html.match(/wa\.me\/(\d{10,15})/); return m?m[1]:null;
+    }
+    if (key==='email'){
+      const m = html.match(/[\w.+%-]+@clinicaelcana\.com\.br/i); return m?m[0]:null;
+    }
+    if (key==='insta'){
+      const m = html.match(/instagram\.com\/([\w.]+)/i); return m?m[1]:null;
+    }
+  } catch(e){}
+  return null;
+}
+
+// ─── Construção dos campos de texto ─────────────
+function buildTextFields(){
+  Object.entries(TEXTOS).forEach(([cat, fields])=>{
+    const c = document.getElementById('txt-'+cat); c.innerHTML='';
+    fields.forEach(field=>{
+      const stored = JSON.parse(localStorage.getItem('elcana_valores')||'{}');
+      const atualInicial = stored[field.k] || field.v;
+      const tag = field.t==='textarea' ? 'textarea' : 'input';
+      const attrs = field.t==='textarea' ? 'rows="2"' : 'type="text"';
+      const div = document.createElement('div'); div.className='field';
       div.innerHTML = `
         <label class="field-label">${field.l}</label>
-        ${field.d ? `<p class="field-desc">${field.d}</p>` : ''}
-        ${inputEl}
+        ${field.d?`<p class="field-desc">${field.d}</p>`:''}
+        <div class="field-sub">Texto atual no site (como está agora)</div>
+        <${tag} id="at-${field.k}" ${attrs}>${escapeHtml(atualInicial)}</${tag}>
+        <div class="field-sub">Novo texto (o que vai aparecer)</div>
+        <${tag} id="nv-${field.k}" ${attrs}>${escapeHtml(atualInicial)}</${tag}>
         <div class="field-actions">
-          <button class="btn" onclick="publicarTexto('${field.k}','${field.l}')">💾 Publicar no Site</button>
+          <button class="btn" onclick="publicarTexto('${field.k}')">💾 Publicar no Site</button>
           <span class="field-status" id="fs-${field.k}"></span>
         </div>`;
-      container.appendChild(div);
+      // Para input type=text precisamos colocar value via JS porque innerHTML não monta o value de input
+      c.appendChild(div);
+      if (field.t!=='textarea'){
+        document.getElementById('at-'+field.k).value = atualInicial;
+        document.getElementById('nv-'+field.k).value = atualInicial;
+      }
     });
   });
 }
 
-async function publicarTexto(key, label) {
-  if (!CFG.token) { showToast('Configure o GitHub primeiro!','err'); return; }
+function escapeHtml(s){ return String(s).replace(/[&<>"]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c])); }
 
-  const el  = document.getElementById('f-'+key);
-  const st  = document.getElementById('fs-'+key);
-  const val = el.tagName==='TEXTAREA' ? el.value.trim() : el.value.trim();
-  if (!val) { showToast('O campo não pode ficar vazio.','err'); return; }
+// ─── Publicação de texto ────────────────────────
+async function publicarTexto(key){
+  if (!CFG.token){ showToast('Configure o GitHub primeiro.','err'); return; }
+  const field = Object.values(TEXTOS).flat().find(f=>f.k===key);
+  const st = document.getElementById('fs-'+key);
+  const atual = document.getElementById('at-'+key).value;
+  const novo  = document.getElementById('nv-'+key).value;
+  if (!atual.trim() || !novo.trim()){ st.textContent='✗ Preencha ambos os campos.'; st.className='field-status err'; return; }
+  if (atual === novo){ st.textContent='Nada a publicar — atual = novo.'; st.className='field-status'; return; }
 
-  const htmlFile = HTML_MAP[key];
-  if (!htmlFile) { st.textContent='✗ Arquivo não mapeado'; st.className='field-status err'; return; }
+  // Lista de arquivos a editar: o do campo + todos os arquivos (se for global)
+  const arquivos = TEXTOS_GLOBAIS.includes(key) ? ARQUIVOS_HTML : [field.file];
 
-  // Sempre recarregar CFG do localStorage para garantir token mais recente
-  const cfgFresh = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
-  if (cfgFresh.token) Object.assign(CFG, cfgFresh);
+  st.textContent='⏳ Buscando HTML atual...'; st.className='field-status loading';
+  let alteracoes = 0, falhas = [];
 
-  if (!CFG.token) { showToast('Configure o GitHub primeiro!','err'); return; }
-
-  st.textContent = '⏳ Publicando...'; st.className = 'field-status loading';
-  setStatus(`Publicando "${label}"...`);
-
-  try {
-    // ⚠ NUNCA usar HTML embutido como base — sobrescreveria o código atual do repo.
-    // Sempre buscar a versão MAIS RECENTE do GitHub, aplicar a substituição
-    // do texto e devolver. Isso preserva CSS, estrutura, scripts e qualquer
-    // alteração de design feita diretamente no repositório.
-    const remoto = await ghGet(htmlFile);
-    if (!remoto || !remoto.content) {
-      const detalhe = window._ghLastError ? (' (' + window._ghLastError + ')') : '';
-      let dica = '';
-      if (window._ghLastError && window._ghLastError.includes('401')) dica = ' — Token inválido ou expirado.';
-      else if (window._ghLastError && window._ghLastError.includes('403')) dica = ' — Sem permissão. Verifique o token (precisa de Contents: Read & Write).';
-      else if (window._ghLastError && window._ghLastError.includes('404')) dica = ' — Arquivo ou repositório não encontrado.';
-      else if (window._ghLastError && window._ghLastError.includes('Erro de rede')) dica = ' — Sem conexão com api.github.com.';
-      st.textContent = '✗ Não foi possível ler ' + htmlFile + ' do GitHub.' + detalhe + dica;
-      st.className = 'field-status err'; return;
+  for (const arq of arquivos){
+    // Sempre buscar versão fresca antes de editar (evita SHA conflict)
+    let info;
+    try { info = await ghGet(arq); } catch(e){ falhas.push(arq+': '+e.message); continue; }
+    if (!info){ falhas.push(arq+': não encontrado'); continue; }
+    const raw = atob(info.content.replace(/\n/g,''));
+    const htmlAtual = decodeURIComponent(escape(raw));
+    if (!htmlAtual.includes(atual)){
+      // se for arquivo global e não tiver match, é OK pular
+      if (TEXTOS_GLOBAIS.includes(key)) continue;
+      falhas.push(arq+': "texto atual" não encontrado no HTML — ajuste o campo "Texto atual no site" para combinar exatamente.');
+      continue;
     }
-
-    // Decodifica base64 (UTF-8 safe)
-    const b64atual = remoto.content.replace(/\n/g, '');
-    const htmlAtual = decodeURIComponent(escape(atob(b64atual)));
-    const shaAtual  = remoto.sha;
-    saveSHA(htmlFile, shaAtual);
-
-    const htmlNovo = substituirTexto(htmlAtual, key, val);
-    if (htmlNovo === htmlAtual) {
-      st.textContent = '⚠ Texto não localizado no HTML atual do repositório (estrutura foi alterada?).';
-      st.className = 'field-status err'; return;
-    }
-
+    const htmlNovo = htmlAtual.split(atual).join(novo);
+    if (htmlNovo === htmlAtual){ falhas.push(arq+': nenhuma substituição feita'); continue; }
     const b64 = btoa(unescape(encodeURIComponent(htmlNovo)));
-    const { ok, msg, conflict, newSha } = await ghPut(htmlFile, b64, shaAtual, `Admin: atualiza "${label}"`);
-
-    if (ok) {
-      if (newSha) saveSHA(htmlFile, newSha);
-      setValorAtual(key, val); // grava o novo valor como atual para próximas edições
-      st.textContent = '✓ Publicado! Site atualiza em 1–2 min.';
-      st.className = 'field-status ok';
-      showToast(`✓ "${label}" publicado!`, 'ok');
-      setStatus(`✓ "${label}" publicado com sucesso!`);
-      return;
-    }
-
-    if (conflict) {
-      st.textContent = '✗ Conflito de versão. Tente publicar novamente.';
+    const r = await ghPut(arq, b64, info.sha, `Editor: atualiza "${field.l}" em ${arq}`);
+    if (r.ok){
+      alteracoes++;
+      HTML_CACHE[arq] = { content: htmlNovo, sha: r.newSha };
     } else {
-      st.textContent = '✗ ' + msg;
+      falhas.push(arq+': '+r.msg);
     }
-    st.className = 'field-status err';
+  }
 
-  } catch(e) {
-    st.textContent = '✗ ' + e.message;
-    st.className = 'field-status err';
+  if (alteracoes>0){
+    // Salva o novo valor como "último conhecido"
+    const stored = JSON.parse(localStorage.getItem('elcana_valores')||'{}');
+    stored[key] = novo;
+    localStorage.setItem('elcana_valores', JSON.stringify(stored));
+    document.getElementById('at-'+key).value = novo;
+    st.textContent = `✓ Publicado em ${alteracoes} arquivo(s)! Site atualiza em 1–2 min.` + (falhas.length?` (avisos: ${falhas.length})`:'');
+    st.className='field-status ok';
+    showToast(`"${field.l}" publicado!`,'ok');
+    if (falhas.length) console.warn('Avisos:', falhas);
+  } else {
+    st.textContent='✗ '+(falhas[0]||'Nenhuma alteração feita.');
+    st.className='field-status err';
   }
 }
 
-// ══════════════════════════════════════════════
-// SUBSTITUIÇÃO DE TEXTO NO HTML — por correspondência literal
-// ══════════════════════════════════════════════
-// Estratégia: usar o valor ATUAL conhecido (snapshot em localStorage) como
-// âncora e trocar pela nova string. Funciona independentemente da estrutura
-// HTML (tema WordPress/Salient, Elementor, etc.), sem alterar CSS/design.
-function substituirTexto(html, key, novo) {
-  // Casos especiais que usam regex (telefones/links/handles)
-  if (key === 'tel') {
-    let r = html;
-    const atual = getValorAtual('tel');
-    if (atual && r.indexOf(atual) !== -1) {
-      r = r.split(atual).join(novo);
-    } else {
-      r = r.replace(/\(\d{2}\)\s?\d{4,5}-?\d{4}/g, novo);
-    }
-    const d = novo.replace(/\D/g,'');
-    if (d) r = r.replace(/href="tel:\+?\d+"/g, `href="tel:${d}"`);
-    return r;
-  }
-  if (key === 'whatsapp') {
-    // troca número em todos os links wa.me/ e api.whatsapp.com/send?phone=
-    let r = html.replace(/wa\.me\/\d{10,15}/g, `wa.me/${novo}`);
-    r = r.replace(/(api\.whatsapp\.com\/send\?phone=)\d{10,15}/g, `$1${novo}`);
-    r = r.replace(/(["'])\+?\d{12,15}(["'])/g, (m,a,b) => {
-      // só substitui se parecer mesmo um telefone com DDI já conhecido
-      const atual = getValorAtual('whatsapp');
-      return (atual && m.indexOf(atual) !== -1) ? a+novo+b : m;
+// ═══════════════ IMAGENS ═══════════════
+function buildImageGrids(){
+  ['home','trat','geral'].forEach(cat=>{
+    const g = document.getElementById('grid-'+cat); g.innerHTML='';
+    IMAGENS[cat].forEach(item=>{
+      const id = 'card-'+item.f.replace(/[^a-z0-9]/gi,'_');
+      const card = document.createElement('div'); card.className='icard'; card.id=id;
+      card.innerHTML = `
+        <div class="icard-img-placeholder" id="ph-${id}">⏳ ${CFG.token?'Carregando...':'Configure o GitHub'}</div>
+        <div class="icard-body">
+          <span class="icard-label">${item.l}</span>
+          <p class="icard-name">${item.f.split('/')[1]}</p>
+          <button class="ibtn" onclick='openModal(${JSON.stringify(item.f)}, ${JSON.stringify(item.l)})'>🔄 Trocar Imagem</button>
+        </div>`;
+      g.appendChild(card);
     });
-    return r;
-  }
-  if (key === 'email') {
-    const atual = getValorAtual('email');
-    if (atual && html.indexOf(atual) !== -1) {
-      return html.split(atual).join(novo);
-    }
-    // fallback: troca o primeiro e-mail aparente
-    return html.replace(/[\w.+%-]+@[\w.-]+\.[a-z]{2,}/i, novo);
-  }
-  if (key === 'instagram') {
-    let r = html.replace(/instagram\.com\/[\w.\-]+/gi, `instagram.com/${novo}`);
-    const atual = getValorAtual('instagram');
-    if (atual) r = r.split('@'+atual).join('@'+novo);
-    r = r.replace(/>@[\w.\-]+</g, `>@${novo}<`);
-    return r;
-  }
-
-  // Caso geral: troca por texto literal usando o valor atual como âncora
-  const atual = getValorAtual(key);
-  if (atual == null || atual === '') return html;
-  if (atual === novo) return html; // nada a fazer
-
-  // 1) match exato
-  if (html.indexOf(atual) !== -1) {
-    return html.split(atual).join(novo);
-  }
-  // 2) tenta versão com entidades HTML escapadas
-  const escAtual = htmlEscape(atual);
-  if (escAtual !== atual && html.indexOf(escAtual) !== -1) {
-    return html.split(escAtual).join(htmlEscape(novo));
-  }
-  // 3) tenta normalizando espaços em branco (texto puro vs HTML com <br> ou \n)
-  //    Procura a primeira ocorrência aproximada e troca-a por `novo`.
-  const flexPattern = atual
-    .replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // escape regex
-    .replace(/\s+/g, '[\\s\\u00a0]*(?:<[^>]+>\\s*)?'); // permite tags entre palavras
+  });
+  if (CFG.token) loadAllImages();
+}
+function loadAllImages(){
+  const all = [...IMAGENS.home, ...IMAGENS.trat, ...IMAGENS.geral];
+  all.forEach((item,i)=> setTimeout(()=>loadImageCard(item), i*150));
+}
+async function loadImageCard(item){
+  const id = 'card-'+item.f.replace(/[^a-z0-9]/gi,'_');
+  const ph = document.getElementById('ph-'+id); if (!ph) return;
   try {
-    const re = new RegExp(flexPattern);
-    if (re.test(html)) {
-      return html.replace(re, novo);
+    const data = await ghGet(item.f);
+    if (!data || !data.download_url){ ph.textContent='✗ Não encontrada'; ph.style.color='var(--verm)'; return; }
+    const img = document.createElement('img');
+    img.className='icard-img'; img.alt=item.l;
+    img.src = data.download_url + '?t='+Date.now();
+    img.onerror = ()=>{ ph.textContent='✗ Erro'; ph.style.color='var(--verm)'; };
+    img.onload  = ()=>{ if (ph.parentNode) ph.replaceWith(img); };
+  } catch(e){ ph.textContent='✗ Erro'; }
+}
+function openModal(file, label){
+  imgAtual=file; fileNovo=null;
+  document.getElementById('modal-label').textContent=label;
+  document.getElementById('preview').style.display='none';
+  document.getElementById('file-in').value='';
+  document.getElementById('modal-status').textContent='';
+  const b=document.getElementById('btn-confirmar'); b.disabled=false; b.innerHTML='✓ Confirmar e Publicar';
+  document.getElementById('modal').classList.add('on');
+}
+function closeModal(){ document.getElementById('modal').classList.remove('on'); }
+function onFileSelect(input){
+  if (!input.files[0]) return;
+  if (input.files[0].size > 5*1024*1024){ showToast('Máximo 5MB.','err'); return; }
+  fileNovo = input.files[0];
+  const rd=new FileReader();
+  rd.onload=e=>{ const pv=document.getElementById('preview'); pv.src=e.target.result; pv.style.display='block'; };
+  rd.readAsDataURL(fileNovo);
+}
+// Drag & drop
+window.addEventListener('DOMContentLoaded', ()=>{
+  const dz=document.getElementById('drop-zone');
+  dz.addEventListener('dragover', e=>{ e.preventDefault(); dz.classList.add('drag'); });
+  dz.addEventListener('dragleave', ()=> dz.classList.remove('drag'));
+  dz.addEventListener('drop', e=>{
+    e.preventDefault(); dz.classList.remove('drag');
+    const f=e.dataTransfer.files[0];
+    if (f && f.type.startsWith('image/')){
+      fileNovo=f;
+      const rd=new FileReader();
+      rd.onload=ev=>{ const pv=document.getElementById('preview'); pv.src=ev.target.result; pv.style.display='block'; };
+      rd.readAsDataURL(f);
     }
-  } catch(_) {}
-
-  // Não encontrou — devolve igual (publicarTexto detecta e avisa)
-  return html;
-}
-
-// ══════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════
-let toastTimer;
-function showToast(msg, type='info') {
-  clearTimeout(toastTimer);
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.className = `toast ${type}`; t.style.display = 'block';
-  toastTimer = setTimeout(() => t.style.display='none', 4000);
-}
-
-// Close modal on backdrop click
-document.getElementById('modal').addEventListener('click', e => {
-  if (e.target===document.getElementById('modal')) closeModal();
+  });
+  document.getElementById('modal').addEventListener('click', e=>{
+    if (e.target===document.getElementById('modal')) closeModal();
+  });
 });
-
-// ══════════════════════════════════════════════
-// TESTE DE CONEXÃO MANUAL
-// ══════════════════════════════════════════════
-async function testarConexao() {
-  const btn = document.getElementById('btn-test-conn');
-  // Recarregar CFG do localStorage para garantir token mais recente
-  const cfgFresh3 = JSON.parse(localStorage.getItem('elcana_cfg') || '{}');
-  if (cfgFresh3.token) Object.assign(CFG, cfgFresh3);
-  if (!CFG.token) { showToast('Configure o token GitHub primeiro (⚙️ Configurações)','err'); return; }
-  btn.disabled = true;
-  btn.textContent = '⏳ Testando...';
-  setStatus('Testando conexão com GitHub...');
+async function publicarImagem(){
+  if (!fileNovo){ showToast('Selecione uma imagem.','err'); return; }
+  if (!CFG.token){ showToast('Configure o GitHub.','err'); return; }
+  const btn=document.getElementById('btn-confirmar'), st=document.getElementById('modal-status');
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span>Publicando...';
+  st.textContent='Buscando SHA atual...';
   try {
-    // Testa acesso ao repo
-    const repoRes = await fetch(`https://api.github.com/repos/${CFG.user}/${CFG.repo}`, { headers: ghHeaders() });
-    if (!repoRes.ok) {
-      const j = await repoRes.json().catch(()=>({}));
-      const msg = j.message || ('HTTP ' + repoRes.status);
-      let dica = '';
-      if (repoRes.status === 401) dica = '\nToken inválido ou expirado. Gere um novo token.';
-      else if (repoRes.status === 403) dica = '\nAcesso negado. Verifique permissões do token.';
-      else if (repoRes.status === 404) dica = '\nRepositório não encontrado. Verifique usuário/repo.';
-      showToast('✗ Erro: ' + msg + dica, 'err');
-      setStatus('✗ Falha na conexão: ' + msg);
-      btn.disabled = false; btn.textContent = '🔌 Testar Conexão'; return;
+    const b64 = await toBase64(fileNovo);
+    // SHA sempre fresco (evita conflitos)
+    const info = await ghGet(imgAtual);
+    const sha = info ? info.sha : null;
+    const r = await ghPut(imgAtual, b64, sha, `Editor: atualiza ${imgAtual.split('/')[1]}`);
+    if (r.ok){
+      st.textContent='✓ Publicado! Site atualiza em 1–2 min.'; st.style.color='var(--verde)';
+      showToast(`✓ ${imgAtual.split('/')[1]} publicada!`,'ok');
+      closeModal();
+      setTimeout(loadAllImages, 1200);
+    } else if (r.conflict){
+      // retry uma vez
+      const fresh = await ghGet(imgAtual);
+      const r2 = await ghPut(imgAtual, b64, fresh?fresh.sha:null, `Editor: atualiza ${imgAtual.split('/')[1]} (retry)`);
+      if (r2.ok){ st.textContent='✓ Publicado!'; closeModal(); setTimeout(loadAllImages,1200); }
+      else { st.textContent='✗ Conflito: '+r2.msg; st.style.color='var(--verm)'; btn.disabled=false; btn.innerHTML='✓ Confirmar e Publicar'; }
+    } else {
+      st.textContent='✗ '+r.msg; st.style.color='var(--verm)';
+      btn.disabled=false; btn.innerHTML='✓ Confirmar e Publicar';
     }
-    // Testa leitura de index.html
-    const fileRes = await ghGet('index.html');
-    if (!fileRes) {
-      const detalhe = window._ghLastError || 'resposta vazia';
-      let dica = '';
-      if (detalhe.includes('401')) dica = '\nToken não tem permissão de leitura de conteúdo.';
-      else if (detalhe.includes('404')) dica = '\nindex.html não encontrado no repositório.';
-      showToast('⚠ Repo OK, mas não conseguiu ler index.html: ' + detalhe + dica, 'err');
-      setStatus('⚠ Problema ao ler arquivos do repo');
-      btn.disabled = false; btn.textContent = '🔌 Testar Conexão'; return;
-    }
-    showToast('✓ Conexão OK! Token válido e index.html lido com sucesso.', 'ok');
-    setStatus('✓ Conexão testada com sucesso.');
-  } catch(e) {
-    showToast('✗ Erro de rede: ' + e.message + '\nVerifique sua conexão com a internet.', 'err');
-    setStatus('✗ Erro de rede ao conectar com GitHub');
+  } catch(e){
+    st.textContent='✗ '+e.message; st.style.color='var(--verm)';
+    btn.disabled=false; btn.innerHTML='✓ Confirmar e Publicar';
   }
-  btn.disabled = false;
-  btn.textContent = '🔌 Testar Conexão';
 }
+function toBase64(file){
+  return new Promise((res,rej)=>{
+    const rd=new FileReader();
+    rd.onload=()=> res(rd.result.split(',')[1]);
+    rd.onerror=rej; rd.readAsDataURL(file);
+  });
+}
+
+// ─── Toast ─────────────────────────────────────
+let toastTimer;
+function showToast(msg, type='info'){
+  clearTimeout(toastTimer);
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.className='toast '+type; t.style.display='block';
+  toastTimer=setTimeout(()=> t.style.display='none', 4000);
+}
+
+document.addEventListener('keydown', e=>{
+  if (e.key==='Enter' && document.getElementById('login').style.display!=='none') doLogin();
+});
 </script>
 </body>
 </html>
